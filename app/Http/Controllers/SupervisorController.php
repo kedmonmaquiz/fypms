@@ -16,15 +16,7 @@ class SupervisorController extends Controller
         $this->middleware('auth');
     }
     
-     public function consultations(){
+    public function consultations(){
     	return view('supervisor.consultations');
-    }
-
-    public function reports(){
-    	return view('supervisor.reports');
-    }
-
-    public function panel(){
-    	return view('supervisor.panel');
     }
 }
