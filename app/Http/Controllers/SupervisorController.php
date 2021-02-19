@@ -23,4 +23,8 @@ class SupervisorController extends Controller
     public function panel(){
     	return view('supervisor.panel');
     }
+
+    public function reports(){
+    	return view('supervisor.reports');
+    }
 }
