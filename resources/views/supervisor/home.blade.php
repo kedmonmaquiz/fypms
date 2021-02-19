@@ -82,7 +82,7 @@
       </div>
     <!-- /.box-header -->
       <div class="box-body">
-        <div id="barchart1" style="width: 100%;height: 400px;"></div>
+        <div id="barchart1" style="width: 100%;height: 370px;"></div>
      </div>
     <!-- /.box-body -->
     </div>
@@ -102,10 +102,13 @@
       </div>
       <!-- /.box-header -->
       <div class="box-body">
-        <div id="piechart1" style="width: 100%;height: 400px;"></div>
+        <div id="piechart1" style="width: 100%;height: 370px;"></div>
       </div>
       <!-- /.box-body -->
     </div>
     <!--. Pie chart -->
   </div>
 </div>
+
+
+

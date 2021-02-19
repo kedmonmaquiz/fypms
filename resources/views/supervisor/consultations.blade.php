@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title','My Project')
+@section('title','Consultations')
 
 @section('content')
   
@@ -9,7 +9,7 @@
      	<div class="col-md-12">
      	   <div class="box box-default box-solid">
 		    <div class="box-header with-border">
-		      <h3 class="box-title">Submitted Consultations</h3>
+		      <h3 class="box-title">My Students</h3>
 		      <div class="box-tools pull-right">
 		        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
 		        </button>
@@ -18,23 +18,25 @@
 		    </div>
 		    <!-- /.box-header -->
 		    <div class="box-body">
-		       <table class="table table-bordered">
-		       	  <tr>
-		       	  	<th>Name</th>
-		       	  	<th>Semester</th>
-		       	  	<th>week Number</th>
-		       	  	<th>Submission Day</th>
-		       	  	<th>Remarks</th>
+		       <table id="datatable" class="data-table table table-bordered table-hover" style="width: 100%">
+		       	  <thead>
+		       	  	 <tr>
+			       	  	<th>Student Name</th>
+			       	  	<th>Project Title</th>
+			       	  	<th>Number of Submitted Forms</th>
+			       	  	<th>Actions</th>
 		       	  </tr>
-		       	  @foreach(\App\Models\Consultation::all() as $row)
-	                <tr>
-	                    <td>@if( $row->user){{$row->user->fullName}}@else <i class="text-danger"> - @endif</i></td>
-	                    <td>Semester {{$row->semester_type}}</td>
-	                    <td>Week Number {{$row->week_number}}</td>
-	                    <td>{{date($row->created_at)}}</td>
-	                    <td>@if( $row->remarks){{$row->remarks}}@else <i class="text-danger"> - @endif</i></td>
-	                </tr>                               
+		       	  </thead>
+		       	 <tbody>
+		       	 	@foreach($students as $row)
+		                <tr>
+		                    <td>{{$row->fullName}}</td>
+		                    <td>{{$row->projects->where('project_status_id',$approvedProjectStatusId)->first()->title ?? '-'}}</td>
+		                    <td class="text-center"><i class="badge">{{$row->consultations->count()}}</i></td>
+		                    <td><a href="/supervisor/view-consultations/{{$row->id}}"><i class="fa fa-eye"></i></a></td>
+		                </tr>                               
                  @endforeach
+		       	 </tbody>
 		       </table>
 		    </div>
 		    <!-- /.box-body -->

@@ -49,3 +49,12 @@ Route::get('/student/concept_note',[App\Http\Controllers\StudentController::clas
 Route::get('/student/consultations',[App\Http\Controllers\StudentController::class, 'consultations']);
 Route::get('/student/reports',[App\Http\Controllers\StudentController::class, 'reports']);
 Route::get('/student/results',[App\Http\Controllers\StudentController::class, 'results']);
+
+
+//****************************supervisor routes************************************************//
+Route::get('/supervisor/consultations',[App\Http\Controllers\SupervisorController::class, 'consultations']);
+Route::get('/supervisor/reports',[App\Http\Controllers\SupervisorController::class, 'reports']);
+Route::get('/supervisor/panel',[App\Http\Controllers\SupervisorController::class, 'panel']);
+Route::get('/supervisor/view-consultations/{id}',[App\Http\Controllers\SupervisorController::class, 'viewConsultations']);
+Route::get('/supervisor/view-reports/{id}',[App\Http\Controllers\SupervisorController::class, 'viewReports']);
+Route::patch('supervisor/reports/{id}/update',[App\Http\Controllers\SupervisorController::class, 'updateReport']);
