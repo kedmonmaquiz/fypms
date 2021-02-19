@@ -41,3 +41,11 @@ Route::resource('/consultations',App\Http\Controllers\ConsultationController::cl
 Route::resource('/report_types',App\Http\Controllers\ReportTypeController::class);
 Route::resource('/report_statuses',App\Http\Controllers\ReportStatusController::class);
 Route::resource('/reports',App\Http\Controllers\ReportController::class);
+
+//****************************student routes************************************************//
+Route::get('/student/supervisor',[App\Http\Controllers\StudentController::class, 'supervisor']);
+Route::get('/student/project',[App\Http\Controllers\StudentController::class, 'project']);
+Route::get('/student/concept_note',[App\Http\Controllers\StudentController::class, 'conceptNote']);
+Route::get('/student/consultations',[App\Http\Controllers\StudentController::class, 'consultations']);
+Route::get('/student/reports',[App\Http\Controllers\StudentController::class, 'reports']);
+Route::get('/student/results',[App\Http\Controllers\StudentController::class, 'results']);
