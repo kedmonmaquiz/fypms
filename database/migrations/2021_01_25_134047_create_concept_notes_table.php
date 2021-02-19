@@ -16,7 +16,7 @@ class CreateConceptNotesTable extends Migration
         Schema::create('concept_notes', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('file');
-            $table->bigInteger('user_id')->unsigned();
+            $table->bigInteger('user_id')->unsigned()->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('set null');

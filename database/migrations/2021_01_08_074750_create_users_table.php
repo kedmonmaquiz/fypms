@@ -21,6 +21,8 @@ class CreateUsersTable extends Migration
             $table->string('last_name');
             $table->string('email');
             $table->string('gender');
+            $table->string('office_no')->nullable();
+            $table->string('category')->nullable();
             $table->string('phone')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
@@ -32,7 +34,6 @@ class CreateUsersTable extends Migration
 
             $table->foreign('department_id')->references('id')->on('departments')->onDelete('set null');
             $table->foreign('program_id')->references('id')->on('programs')->onDelete('set null');
-            $table->foreign('project_id')->references('id')->on('projects')->onDelete('set null');
             $table->foreign('academic_year_id')->references('id')->on('academic_years')->onDelete('set null');
         });
     }
