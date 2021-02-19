@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Project;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
@@ -17,26 +18,26 @@ class StudentController extends Controller
     }
     
     public function supervisor(){
-    	return view('student.supervisor');
+        return view('student.supervisor');
     }
 
     public function project(){
-    	return view('student.project');
+        return view('student.project');
     }
 
     public function conceptNote(){
-    	return view('student.concept_note');
+        return view('student.concept_note');
     }
 
     public function consultations(){
-    	return view('student.consultations');
+        return view('student.consultations');
     }
 
     public function reports(){
-    	return view('student.reports');
+        return view('student.reports');
     }
 
     public function results(){
-    	return view('student.results');
+        return view('student.results');
     }
 }
