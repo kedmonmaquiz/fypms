@@ -13,7 +13,7 @@
     </div>
     <!-- /.box-header -->
     <div class="box-body">
-       Waiting For Response
+       {{\Auth::user()->projects->last()->projectStatus->display_name ?? '-'}}
     </div>
     <!-- /.box-body -->
   </div>
@@ -51,7 +51,7 @@
     </div>
     <!-- /.box-header -->
     <div class="box-body">
-       Not Assigned Yet
+       {{\App\Models\User::where('id',\Auth::user()->supervisor_id)->first()->fullName ?? '-'}}
     </div>
     <!-- /.box-body -->
   </div>
@@ -159,7 +159,7 @@
       </div>
     <!-- /.box-header -->
       <div class="box-body">
-        <div id="barchart1" style="width: 100%;height: 400px;"></div>
+        <div id="barchart1" style="width: 100%;height: 370px;"></div>
      </div>
     <!-- /.box-body -->
     </div>
@@ -169,7 +169,7 @@
      <!-- Pie chart -->
     <div class="box box-default box-solid">
       <div class="box-header with-border">
-        <h3 class="box-title">Projects According to Platforms</h3>
+        <h3 class="box-title">Projects According to Categories</h3>
 
         <div class="box-tools pull-right">
           <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -179,7 +179,7 @@
       </div>
       <!-- /.box-header -->
       <div class="box-body">
-        <div id="piechart1" style="width: 100%;height: 400px;"></div>
+        <div id="piechart1" style="width: 100%;height: 370px;"></div>
       </div>
       <!-- /.box-body -->
     </div>

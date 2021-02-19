@@ -52,21 +52,27 @@
 		    </div>
 		    <!-- /.box-header -->
 		    <div class="box-body">
-		       <table class="table table-bordered">
-		       	  <tr>
+		        <table id="datatable" class="data-table table table-bordered" style="width:100%;">
+		       	  <thead>
+		       	  	<tr>
 		       	  	<th>#</th>
 		       	  	<th>Name</th>
 		       	  	<th>Submission Date</th>
 		       	  	<th>Status</th>
+		       	  	<th>Download</th>
 		       	  </tr>
-		       	  @foreach(\App\Models\ConceptNote::all() as $row)
+		       	  </thead>
+		       	  <tbody>
+		       	  	@foreach(\App\Models\ConceptNote::all() as $row)
 	                <tr>
 	                    <td>{{$loop->index+1}}</td>
-	                    <td>{{$row->file}}</td>
+	                    <td>Concep note {{$loop->index+1}}</td>
 	                    <td>{{date($row->created_at)}}</td>
-	                    <td>{{'Accepted'}}</td>
+	                    <td>{{'-'}}</td>
+	                    <td><i class="fa fa-download"></i></td>
 	                </tr>                               
                  @endforeach
+		       	  </tbody>
 		       </table>
 		    </div>
 		    <!-- /.box-body -->

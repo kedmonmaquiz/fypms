@@ -17,7 +17,13 @@
 		    </div>
 		    <!-- /.box-header -->
 		    <div class="box-body">
-		       <form action="{{ route('consultations.store') }}" method="post" enctype="multipart/form-data">
+		       @if(\Auth::user()->supervisor_id < 1)
+                 
+                <div>
+		          	<span class="text-danger"><strong>IMPORTANT!</strong> You are not asigned a supervisor</span>
+		          </div>
+                @else
+                  <form action="{{ route('consultations.store') }}" method="post" enctype="multipart/form-data">
 		         @csrf
 		         <div class="form-group {{$errors->has('semester_type')?'has-error':''}}">
 		          <label class="required">Semester</label>
@@ -76,6 +82,7 @@
 		       <button type="submit" class="btn btn-primary pull-right">Submit</button>
 		      </div>
 		    </form>
+		       @endif
 		    </div>
 		    <!-- /.box-body -->
 		  </div>
@@ -93,19 +100,23 @@
 		    </div>
 		    <!-- /.box-header -->
 		    <div class="box-body">
-		       <table class="table table-bordered">
-		       	  <tr>
+		       <table id="datatable" class="data-table table table-bordered" style="width:100%;">
+		       	 <thead>
+		       	 	<tr>
 		       	  	<th>Week No</th>
 		       	  	<th>Submission Day</th>
 		       	  	<th>Remarks</th>
 		       	  </tr>
-		       	  @foreach(\App\Models\Consultation::all() as $row)
+		       	 </thead>
+		       	  <tbody>
+		       	  	@foreach(\App\Models\Consultation::all() as $row)
 	                <tr>
 	                    <td>Week {{$row->week_number}}</td>
 	                    <td>{{date($row->created_at)}}</td>
 	                    <td>@if( $row->remarks){{$row->remarks}}@else <i class="text-danger"> - @endif</i></td>
 	                </tr>                               
                  @endforeach
+		       	  </tbody>
 		       </table>
 		    </div>
 		    <!-- /.box-body -->

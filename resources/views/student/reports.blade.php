@@ -52,7 +52,7 @@
      	<div class="col-md-8">
      		<div class="box box-default box-solid">
 		    <div class="box-header with-border">
-		      <h3 class="box-title">Title History</h3>
+		      <h3 class="box-title">Submitted Reports</h3>
 		      <div class="box-tools pull-right">
 		        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
 		        </button>
@@ -61,22 +61,28 @@
 		    </div>
 		    <!-- /.box-header -->
 		    <div class="box-body">
-		       <table class="table table-bordered">
-		       	  <tr>
-		       	  	<th>#</th>
-		       	  	<th>Report Type</th>
-		       	  	<th>Submission Date</th>
-		       	  	<th>Status</th>
-		       	  	<td>Remarks</td>
+		       <table id="datatable" class="data-table table table-bordered" style="width:100%">
+		       	  <thead>
+		       	  	 <tr>
+			       	  	<th>#</th>
+			       	  	<th>Report Type</th>
+			       	  	<th>Submission Date</th>
+			       	  	<th>Status</th>
+			       	  	<td>Remarks</td>
+			       	  	<td>Download</td>
 		       	  </tr>
+		       	  </thead>	
 		       	  @foreach(\App\Models\Report::all() as $row)
-	                <tr>
+	                <tbody>
+	                  <tr>
 	                    <td>{{$loop->index+1}}</td>
-	                    <td>@if($row->type){{$row->type->display_name}} @else <i class="text-danger">Not Found</i> @endif</td>
+	                    <td>@if($row->reportType){{$row->reportType->display_name}} @else <i class="text-danger">Not Found</i> @endif</td>
 	                    <td>{{date($row->created_at)}}</td>
-	                    <td>@if($row->status){{$row->status}}@else <i class="text-danger">Not Found @endif</i></td>
+	                    <td>@if($row->reportStatus) <i class="badge">{{$row->reportStatus->display_name}}</i> @else <i class="text-danger">Not Found @endif</i></td>
 	                    <td>@if($row->remarks){{$row->remarks}} @else - @endif </td>
-	                </tr>                               
+	                    <td class="text-center"><span class="fa fa-download"></span></td>
+	                </tr>     
+	                </tbody>                          
                  @endforeach
 		       </table>
 		    </div>
