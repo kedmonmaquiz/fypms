@@ -19,4 +19,8 @@ class SupervisorController extends Controller
     public function consultations(){
     	return view('supervisor.consultations');
     }
+
+    public function panel(){
+    	return view('supervisor.panel');
+    }
 }
