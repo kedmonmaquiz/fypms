@@ -38,24 +38,7 @@
         padding-left:5px;
     }
 
-    .skin-blue-light .main-sidebar {
+    /*.skin-blue-light .main-sidebar {
        border-right:1px solid #ffffff;
-    }
-
-    .main-footer {
-        background: #ecf0f5;
-    }
-
-    .sidebar{
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-
-     @media (min-width: 768px) { 
-         .sidebar-toggle{
-            display: none;
-          }
-        }
-
+    }*/
   </style>
