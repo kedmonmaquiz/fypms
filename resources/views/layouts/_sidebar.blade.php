@@ -33,10 +33,12 @@
   
   @if(\Auth::user()->hasRole('supervisor'))
 	<li class="header">SUPERVISOR</li>
-	<li class="{{\Request::is('/') ? 'active':''}}"><a href="{{ url('/') }}"><i class="fa fa-home"></i> <span>Home</span></a></li>
-	<li class="{{\Request::is('supervisor/consultations') ? 'active':''}}"><a href="{{ url('/supervisor/consultations') }}"><i class="fa fa-commenting"></i> <span>Consultations</span></a></li>
-    <li class="{{\Request::is('supervisor/reports') ? 'active':''}}"><a href="{{ url('/supervisor/reports') }}"><i class="fa fa-file-pdf-o"></i> <span>Reports</span></a></li>
-    <li class="{{\Request::is('supervisor/panel') ? 'active':''}}"><a href="{{ url('/supervisor/panel') }}"><i class="fa fa-object-group"></i> <span>Panel</span></a></li>
+		 @if(!\Auth::user()->hasRole('coordinator'))
+	        <li class="{{\Request::is('/') ? 'active':''}}"><a href="{{ url('/') }}"><i class="fa fa-home"></i> <span>Home</span></a></li>
+		 @endif
+		<li class="{{\Request::is('supervisor/consultations') ? 'active':''}}"><a href="{{ url('/supervisor/consultations') }}"><i class="fa fa-commenting"></i> <span>Consultations</span></a></li>
+	    <li class="{{\Request::is('supervisor/reports') ? 'active':''}}"><a href="{{ url('/supervisor/reports') }}"><i class="fa fa-file-pdf-o"></i> <span>Reports</span></a></li>
+	    <li class="{{\Request::is('supervisor/panel') ? 'active':''}}"><a href="{{ url('/supervisor/panel') }}"><i class="fa fa-object-group"></i> <span>Panel</span></a></li>
   @endif
 
 
