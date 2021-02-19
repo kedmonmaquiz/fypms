@@ -3,7 +3,7 @@
 <head>
   @include('layouts._head')
 </head>
-<body class="hold-transition skin-purple sidebar-mini">
+<body class="hold-transition skin-green sidebar-mini">
 <div class="wrapper">
 
   <header class="main-header">
@@ -22,7 +22,7 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" style="background-color: #75878f">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       @yield('content-header')

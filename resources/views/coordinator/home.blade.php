@@ -2,7 +2,7 @@
   
   <div class="col-md-3">
 		<!-- small box -->
-      <div class="small-box bg-aqua">
+      <div class="small-box bg-green">
         <div class="inner">
           <h3>{{\App\Models\Role::where('name','student')->first()->users->count()}}</h3>
 
@@ -19,7 +19,7 @@
 
 	<div class="col-md-3">
 <!-- small box -->
-    <div class="small-box bg-aqua">
+    <div class="small-box bg-green">
       <div class="inner">
         <h3>{{\App\Models\Project::all()->count()}}</h3>
 
@@ -36,7 +36,7 @@
     
      <div class="col-md-3">
 		<!-- small box -->
-      <div class="small-box bg-aqua">
+      <div class="small-box bg-green">
         <div class="inner">
           <h3>{{\App\Models\Role::where('name','Supervisor')->first()->users->count()}}</h3>
 
@@ -54,7 +54,7 @@
 
 	<div class="col-md-3">
 		<!-- small box -->
-          <div class="small-box bg-aqua">
+          <div class="small-box bg-green">
             <div class="inner">
               <h3>{{\App\Models\College::all()->count()}}</h3>
 
@@ -72,12 +72,12 @@
 
 <div class="row">
   <div class="col-md-6">
-     <div class="box box-default box-solid">
+     <div class="box box-default box-solid collapsed-box">
       <div class="box-header with-border">
         <h3 class="box-title">Projects According to Categories</h3>
 
         <div class="box-tools pull-right">
-          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+          <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-plus"></i>
           </button>
         </div>
         <!-- /.box-tools -->
@@ -92,7 +92,7 @@
 
   <div class="col-md-6">
      <!-- Pie chart -->
-    <div class="box box-default box-solid">
+    <div class="box box-default box-solid collapsed-box">
       <div class="box-header with-border">
         <h3 class="box-title">Projects According to Categories</h3>
 

@@ -15,7 +15,7 @@
 
       <!--Academic Year-->
       <div class="pull-right" style="padding-right: 14px;padding-top: 8px;">
-          <div class="btn-group" style="">
+          {{-- <div class="btn-group" style="">
             <button type="button" class="btn btn-default">{{\App\Models\AcademicYear::where('status',1)->first()->name}}</button>
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
               <span class="caret"></span>
@@ -26,7 +26,7 @@
                <li><a style="color: #777;" href="">{{$row->name}} <i class="{{$row->name==\App\Models\AcademicYear::where('status',1)->first()->name ? 'fa fa-check':''}}"></i></a></li>
               @endforeach
             </ul>
-        </div>
+        </div> --}}
 
          <!--User Profile-->
          <div class="btn-group" style="">
