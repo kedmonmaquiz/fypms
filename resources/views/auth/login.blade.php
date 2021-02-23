@@ -140,11 +140,11 @@
         <div class="row">
             <div class="col-sm-8" style="padding-top: 40px;">
               <div>
-                  <h2>Welcome to FYP Portal</h2>
+                  <h2>Welcome to FYP Management System</h2>
                    <p>Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Natus tempore, quis architecto ipsam, perferendis impedit alias minima esse, ea nobis at ex laborum eius. Est velit hic rem adipisci aliquid!</p>
               </div>
                <div>
-                  <h2>What does FYP Portal do?</h2>
+                  <h2>What does FYPMS do?</h2>
                   <p>Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Natus tempore, quis architecto ipsam, perferendis impedit alias minima esse, ea nobis at ex laborum eius. Est velit hic rem adipisci aliquid!</p>
                   <dl>
                       <dt>Admin</dt>
@@ -157,7 +157,7 @@
                       <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cupiditate, ex ullam cum perferendis eligendi iure quo, quasi cumque tempore libero rerum ipsam corporis sapiente porro nobis! Aut, sit ipsam?</dd>
                   </dl>
               </div>
-               
+
             </div>
             <div class="col-sm-4 pull-right" style="padding-top: 40px;">
                 <div class="login-box-body">
@@ -171,7 +171,7 @@
                     <span class="glyphicon glyphicon-envelope form-control-feedback "></span>
                     @error('username')
                       <span class="help-block">{{$errors->first('username')}}</span>
-                    @enderror 
+                    @enderror
                   </div>
 
                   <div class="form-group has-feedback {{$errors->has('password') ? 'has-error':''}}">
@@ -184,7 +184,7 @@
                   </div>
                   <div class="row">
                     <div class="col-sm-8">
-                      
+
                     </div>
                     <!-- /.col -->
                     <div class="col-sm-4">
@@ -197,7 +197,7 @@
              <!-- /.login-box-body -->
             </div>
         </div>
-        
+
       </section>
       <!-- /.content -->
     </div>

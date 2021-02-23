@@ -77,5 +77,6 @@ class UserSeeder extends Seeder
            'password'=>\Hash::make('MAQUIZ'),
         ]);
         $user->attachRoles(Role::where('name','student')->pluck('id'));
+
     }
 }
