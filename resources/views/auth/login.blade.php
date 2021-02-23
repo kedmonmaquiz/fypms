@@ -17,14 +17,6 @@
   <link rel="stylesheet" href="{{asset('assets/dist/css/AdminLTE.min.css')}}">
   <!-- Skins.-->
   <link rel="stylesheet" href="{{asset('assets/dist/css/skins/_all-skins.min.css')}}">
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-
   <!-- Google Font -->
   {{-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"> --}}
   <style>
@@ -43,7 +35,7 @@
   </style>
 </head>
 <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
-<body class="hold-transition skin-blue layout-top-nav">
+<body class="hold-transition skin-green layout-top-nav">
 <div class="wrapper">
 
   <header class="main-header">
@@ -113,7 +105,7 @@
                     </div>
                     <!-- /.col -->
                     <div class="col-sm-4">
-                      <button type="submit" class="btn btn-primary btn-block btn-flat">Log In</button>
+                      <button type="submit" class="btn btn-success btn-block btn-flat">Log In</button>
                     </div>
                     <!-- /.col -->
                   </div>
