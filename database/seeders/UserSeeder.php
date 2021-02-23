@@ -32,7 +32,7 @@ class UserSeeder extends Seeder
            'password'=>\Hash::make('MAQUIZ'),
         ]);
         $user->attachRoles(Role::where('name','admin')->pluck('id'));
-        
+
         $user = User::create([
            'username' =>'joseph.cosmas',
            'first_name'=>'Joseph',
@@ -62,7 +62,7 @@ class UserSeeder extends Seeder
            'password'=>\Hash::make('KALINGA'),
         ]);
         $user->attachRoles(Role::where('name','supervisor')->pluck('id'));
-        
+
         $user = User::create([
            'username' =>'2018-04-07388',
            'first_name'=>'Kedmon',
@@ -78,5 +78,19 @@ class UserSeeder extends Seeder
         ]);
         $user->attachRoles(Role::where('name','student')->pluck('id'));
 
+        $user = User::create([
+            'username' =>'2018-04-02401',
+            'first_name'=>'Christoher',
+            'middle_name'=>'Fredrick',
+            'last_name'=>'Masaka',
+            'email'=>'masakachristopher@gmail.com',
+            'gender'=>'male',
+            'phone'=>'0779538196',
+            'category'=>'student',
+            'program_id'=> Program::first()['id'],
+            'academic_year_id'=>AcademicYear::where('status',1)->first()['id'],
+            'password'=>\Hash::make('MASAKA'),
+         ]);
+         $user->attachRoles(Role::where('name','student')->pluck('id'));
     }
 }
